@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://cxvk1nlltxbtc"]
+
+[ext_resource type="Script" path="res://Items/ItemEffects/item_effect.gd" id="1_3nymt"]
+[ext_resource type="Script" path="res://Items/Scripts/item_data.gd" id="1_po3ru"]
+[ext_resource type="Texture2D" uid="uid://c1poaxygheo6f" path="res://Items/Sprites/items.png" id="2_a43ct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb2rr"]
+atlas = ExtResource("2_a43ct")
+region = Rect2(64, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_po3ru")
+name = "Stone"
+description = "Rock n Roll"
+texture = SubResource("AtlasTexture_sb2rr")
+effects = Array[ExtResource("1_3nymt")]([])

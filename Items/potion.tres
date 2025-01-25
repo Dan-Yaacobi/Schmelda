@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://8auovelv2mv3"]
+
+[ext_resource type="Script" path="res://Items/Scripts/item_data.gd" id="1_dpmls"]
+[ext_resource type="Script" path="res://Items/ItemEffects/item_effect.gd" id="1_qqjq5"]
+[ext_resource type="Texture2D" uid="uid://c1poaxygheo6f" path="res://Items/Sprites/items.png" id="2_drogn"]
+[ext_resource type="Script" path="res://Items/ItemEffects/item_effect_heal.gd" id="2_u4a7i"]
+[ext_resource type="AudioStream" uid="uid://dw42532eh8oio" path="res://Items/ItemEffects/hp-up.wav" id="3_uvgxd"]
+
+[sub_resource type="Resource" id="Resource_hmmuw"]
+script = ExtResource("2_u4a7i")
+heal_amount = 2
+audio = ExtResource("3_uvgxd")
+use_description = ""
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsddj"]
+atlas = ExtResource("2_drogn")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_dpmls")
+name = "Potion"
+description = "Used to restore health."
+texture = SubResource("AtlasTexture_gsddj")
+effects = Array[ExtResource("1_qqjq5")]([SubResource("Resource_hmmuw")])
